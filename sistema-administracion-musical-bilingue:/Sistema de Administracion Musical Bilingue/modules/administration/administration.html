@@ -1,48 +1,63 @@
-import { translate } from './language.js';
-
-export function initNavigation(modules) {
-    const menuContainer = document.getElementById('mainMenu');
-    menuContainer.innerHTML = '';
+<div class="module-content">
+    <button class="back-btn" onclick="showMenu()">
+        <span data-translate="common.back">← Volver al Menú</span>
+    </button>
     
-    modules.forEach(module => {
-        const btn = document.createElement('button');
-        btn.className = 'nav-btn';
-        btn.dataset.module = module;
-        btn.textContent = translate(`menu.${module}`);
-        btn.onclick = () => loadModule(module);
-        menuContainer.appendChild(btn);
-    });
-}
-
-export async function loadModule(moduleName) {
-    const moduleContainer = document.getElementById('moduleContainer');
-    const mainMenu = document.getElementById('mainMenu');
+    <h2 data-translate="administration.title">Acuerdo de Administración</h2>
     
-    try {
-        // Cargar HTML del módulo
-        const response = await fetch(`modules/${moduleName}/${moduleName}.html`);
-        const html = await response.text();
-        
-        // Ocultar menú y mostrar módulo
-        mainMenu.style.display = 'none';
-        moduleContainer.innerHTML = html;
-        moduleContainer.style.display = 'block';
-        
-        // Cargar JavaScript del módulo
-        const script = document.createElement('script');
-        script.type = 'module';
-        script.src = `modules/${moduleName}/${moduleName}.js`;
-        document.body.appendChild(script);
-        
-    } catch (error) {
-        console.error(`Error loading module ${moduleName}:`, error);
-    }
-}
-
-export function showMenu() {
-    document.getElementById('mainMenu').style.display = 'grid';
-    document.getElementById('moduleContainer').style.display = 'none';
-    document.getElementById('moduleContainer').innerHTML = '';
-}
-
-window.showMenu = showMenu;
+    <div class="info-box">
+        <h3 data-translate="common.whatIs">¿Qué es?</h3>
+        <p data-translate="administration.description"></p>
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="administration.publisher">Editora (Publisher):</label>
+        <input type="text" id="admin_publisher" placeholder="MUSIC RIGHTS ADMIN LLC">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="administration.writer">Nombre del Compositor:</label>
+        <input type="text" id="admin_writer" placeholder="TELLO ORTIZ">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="administration.date">Fecha del Contrato:</label>
+        <input type="date" id="admin_date">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="administration.commission">Comisión de Administración (%):</label>
+        <input type="number" id="admin_commission" value="20" min="0" max="50">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="administration.term">Duración del Contrato (años):</label>
+        <input type="number" id="admin_term" value="5" min="1" max="10">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="administration.territory">Territorio:</label>
+        <select id="admin_territory">
+            <option value="Worldwide">Mundial (Worldwide)</option>
+            <option value="United States">Estados Unidos</option>
+            <option value="North America">Norteamérica</option>
+        </select>
+    </div>
+    
+    <div class="action-buttons">
+        <button class="btn btn-primary" onclick="generateAdminAgreement()">
+            <span data-translate="common.generate">Generar Vista Previa</span>
+        </button>
+        <button class="btn btn-success" onclick="downloadPDF('admin')">
+            <span data-translate="common.downloadPDF">💾 Descargar PDF</span>
+        </button>
+        <button class="btn btn-info" onclick="downloadImage('admin')">
+            <span data-translate="common.downloadJPG">🖼️ Descargar JPG</span>
+        </button>
+        <button class="btn btn-secondary" onclick="downloadExcel('admin')">
+            <span data-translate="common.downloadExcel">📊 Abrir en Excel</span>
+        </button>
+    </div>
+    
+    <div id="admin_preview" class="preview-box" style="display:none;"></div>
+</div>
