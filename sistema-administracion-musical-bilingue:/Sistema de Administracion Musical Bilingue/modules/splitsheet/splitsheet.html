@@ -1,0 +1,64 @@
+<div class="module-content">
+    <button class="back-btn" onclick="showMenu()">
+        <span data-translate="common.back">← Volver al Menú</span>
+    </button>
+    
+    <h2 data-translate="splitsheet.title">Hoja de Porcentajes (Split Sheet)</h2>
+    
+    <div class="info-box">
+        <h3 data-translate="common.whatIs">¿Qué es?</h3>
+        <p data-translate="splitsheet.description"></p>
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.songTitle">Título de la Canción:</label>
+        <input type="text" id="split_song" placeholder="IN THE ZONE PT 1">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.isrc">ISRC:</label>
+        <input type="text" id="split_isrc" placeholder="TCAEJ1977827">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.writer1">Compositor Principal:</label>
+        <input type="text" id="split_writer1" placeholder="TELLO ORTIZ">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.writerShare">Writer Share (%):</label>
+        <input type="number" id="split_writer1_share" value="100" min="0" max="100">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.publisher">Publisher:</label>
+        <input type="text" id="split_publisher" placeholder="TU EDITORA LLC">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.publisherShare">Publisher Share (%):</label>
+        <input type="number" id="split_publisher_share" value="100" min="0" max="100">
+    </div>
+    
+    <div class="form-group">
+        <label data-translate="splitsheet.date">Fecha:</label>
+        <input type="date" id="split_date">
+    </div>
+    
+    <div class="action-buttons">
+        <button class="btn btn-primary" onclick="generateSplitSheet()">
+            <span data-translate="common.generate">Generar Vista Previa</span>
+        </button>
+        <button class="btn btn-success" onclick="downloadPDF('splitsheet')">
+            <span data-translate="common.downloadPDF">💾 Descargar PDF</span>
+        </button>
+        <button class="btn btn-info" onclick="downloadImage('splitsheet')">
+            <span data-translate="common.downloadJPG">🖼️ Descargar JPG</span>
+        </button>
+        <button class="btn btn-secondary" onclick="downloadExcel('splitsheet')">
+            <span data-translate="common.downloadExcel">📊 Abrir en Excel</span>
+        </button>
+    </div>
+    
+    <div id="splitsheet_preview" class="preview-box" style="display:none;"></div>
+</div>

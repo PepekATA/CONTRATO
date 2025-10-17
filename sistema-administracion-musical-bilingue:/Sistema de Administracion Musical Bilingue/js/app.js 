@@ -1,0 +1,32 @@
+import { initNavigation, loadModule } from './navigation.js';
+import { initLanguage, getCurrentLanguage } from './language.js';
+
+// Configuración de módulos disponibles
+const modules = [
+    'administration',
+    'publishing',
+    'songwriter',
+    'splitsheet',
+    'letter',
+    'help'
+];
+
+// Inicializar aplicación
+window.addEventListener('DOMContentLoaded', async () => {
+    await initLanguage();
+    initNavigation(modules);
+    
+    // Establecer fecha actual en todos los inputs de fecha
+    setCurrentDate();
+});
+
+function setCurrentDate() {
+    const today = new Date().toISOString().split('T')[0];
+    document.addEventListener('DOMContentLoaded', () => {
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        dateInputs.forEach(input => input.value = today);
+    });
+}
+
+// Exponer funciones globales
+window.loadModule = loadModule;

@@ -1,0 +1,113 @@
+{
+  "mainTitle": "🎵 Sistema de Administración Musical",
+  "mainSubtitle": "Generador Profesional de Contratos y Documentos Legales",
+  "menu": {
+    "administration": "📄 Acuerdo de Administración",
+    "publishing": "📋 Acuerdo de Editoría",
+    "songwriter": "✍️ Acuerdo de Compositor",
+    "splitsheet": "💰 Hoja de Porcentajes",
+    "letter": "✉️ Carta de Dirección",
+    "help": "ℹ️ Guía de Uso"
+  },
+  "common": {
+    "back": "← Volver al Menú",
+    "generate": "Generar Vista Previa",
+    "downloadPDF": "💾 Descargar PDF",
+    "downloadJPG": "🖼️ Descargar JPG",
+    "downloadExcel": "📊 Abrir en Excel",
+    "whatIs": "¿Qué es?"
+  },
+  "administration": {
+    "title": "Acuerdo de Administración",
+    "description": "Contrato donde el compositor autoriza a tu empresa a administrar sus derechos de autor musicales, cobrar regalías y registrar obras en PROs (ASCAP, BMI, The MLC). No transfiere la propiedad, solo el derecho a gestionar.",
+    "publisher": "Editora (Publisher)",
+    "writer": "Nombre del Compositor",
+    "date": "Fecha del Contrato",
+    "commission": "Comisión de Administración (%)",
+    "term": "Duración del Contrato (años)",
+    "territory": "Territorio"
+  },
+  "publishing": {
+    "title": "Acuerdo de Editoría",
+    "description": "Acuerdo donde el compositor cede parte de los derechos de publicación (publishing rights) a tu editorial. Puede ser co-publishing (50/50) o full publishing. Incluye participación en ingresos editoriales y mecánicos.",
+    "publisher": "Editora (Publisher)",
+    "writer": "Nombre del Compositor",
+    "date": "Fecha del Contrato",
+    "type": "Tipo de Acuerdo",
+    "share": "Publisher Share (%)"
+  },
+  "songwriter": {
+    "title": "Acuerdo de Compositor",
+    "description": "Contrato entre compositor y editorial que establece términos para obras futuras. Define cómo se dividirán regalías de composición, anticipos, y obligaciones del compositor de entregar obras.",
+    "publisher": "Editora (Publisher)",
+    "writer": "Nombre del Compositor",
+    "date": "Fecha del Contrato",
+    "minimum": "Número Mínimo de Obras por Año",
+    "royalty": "Royalty Rate (% de Writer's Share)"
+  },
+  "splitsheet": {
+    "title": "Hoja de Porcentajes (Split Sheet)",
+    "description": "Documento que especifica quién escribió qué porcentaje de una canción. Esencial para evitar disputas y registrar correctamente en PROs. Define splits de composición y publishing.",
+    "songTitle": "Título de la Canción",
+    "isrc": "ISRC",
+    "writer1": "Compositor Principal",
+    "writerShare": "Writer Share (%)",
+    "publisher": "Publisher",
+    "publisherShare": "Publisher Share (%)",
+    "date": "Fecha"
+  },
+  "letter": {
+    "title": "Carta de Dirección",
+    "description": "Carta formal donde el compositor instruye a las PROs (ASCAP, BMI, The MLC) a pagar regalías directamente a tu empresa como administrador autorizado. Es la autorización oficial de pago.",
+    "writer": "Nombre del Compositor",
+    "publisher": "Editora/Administrador",
+    "pro": "PRO del Compositor",
+    "date": "Fecha",
+    "address": "Dirección del Compositor"
+  },
+  "help": {
+    "title": "📚 Guía Completa de Uso",
+    "admin": {
+      "title": "1️⃣ Administration Agreement",
+      "when": "Cuándo usar: Para gestionar derechos sin comprar el publishing. Tú cobras y distribuyes regalías.",
+      "commission": "Comisión típica: 15-25%",
+      "includes": "Lo que incluye: Registro en PROs, cobro de regalías mecánicas/performance, auditoría de pagos."
+    },
+    "publishing": {
+      "title": "2️⃣ Publishing Agreement",
+      "when": "Cuándo usar: Cuando compras parte del publishing (co-pub) o todo (full pub).",
+      "key": "Diferencia clave: Aquí SÍ adquieres propiedad parcial/total del copyright.",
+      "copub": "Co-Publishing: 50% publisher share (tú) / 50% writer share (compositor)"
+    },
+    "songwriter": {
+      "title": "3️⃣ Songwriter Agreement",
+      "when": "Cuándo usar: Para artistas que crearán obras futuras bajo tu editorial.",
+      "includes": "Incluye: Obligaciones de entrega, anticipos, exclusividad, reversión de derechos."
+    },
+    "splitsheet": {
+      "title": "4️⃣ Split Sheet",
+      "when": "Cuándo usar: SIEMPRE. Para cada canción individual.",
+      "critical": "Crítico para: The MLC, ASCAP, BMI requieren splits claros.",
+      "rule": "Regla: Writer Share + Publisher Share debe sumar 100%"
+    },
+    "letter": {
+      "title": "5️⃣ Letter of Direction",
+      "when": "Cuándo usar: Para que PROs paguen directamente a tu empresa.",
+      "requires": "Requiere: Firma notarizada del compositor (dependiendo de la PRO).",
+      "send": "Enviar a: ASCAP, BMI, The MLC, Harry Fox Agency."
+    },
+    "process": {
+      "title": "📋 Proceso Completo Recomendado:",
+      "step1": "Contactar artista y verificar que es el autor legítimo",
+      "step2": "Firmar Administration Agreement (o Publishing si compras derechos)",
+      "step3": "Obtener Split Sheets de todas las canciones",
+      "step4": "Letter of Direction firmada",
+      "step5": "Copia de ID del compositor",
+      "step6": "Registrar en The MLC como publisher",
+      "step7": "Registrar en ASCAP/BMI al compositor (si no está)",
+      "step8": "Reclamar ISRCs en The MLC con documentación",
+      "step9": "Esperar aprobación (15-45 días)",
+      "step10": "Cobrar regalías históricas y futuras"
+    }
+  }
+}

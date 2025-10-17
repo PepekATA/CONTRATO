@@ -1,0 +1,48 @@
+import { translate } from './language.js';
+
+export function initNavigation(modules) {
+    const menuContainer = document.getElementById('mainMenu');
+    menuContainer.innerHTML = '';
+    
+    modules.forEach(module => {
+        const btn = document.createElement('button');
+        btn.className = 'nav-btn';
+        btn.dataset.module = module;
+        btn.textContent = translate(`menu.${module}`);
+        btn.onclick = () => loadModule(module);
+        menuContainer.appendChild(btn);
+    });
+}
+
+export async function loadModule(moduleName) {
+    const moduleContainer = document.getElementById('moduleContainer');
+    const mainMenu = document.getElementById('mainMenu');
+    
+    try {
+        // Cargar HTML del módulo
+        const response = await fetch(`modules/${moduleName}/${moduleName}.html`);
+        const html = await response.text();
+        
+        // Ocultar menú y mostrar módulo
+        mainMenu.style.display = 'none';
+        moduleContainer.innerHTML = html;
+        moduleContainer.style.display = 'block';
+        
+        // Cargar JavaScript del módulo
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = `modules/${moduleName}/${moduleName}.js`;
+        document.body.appendChild(script);
+        
+    } catch (error) {
+        console.error(`Error loading module ${moduleName}:`, error);
+    }
+}
+
+export function showMenu() {
+    document.getElementById('mainMenu').style.display = 'grid';
+    document.getElementById('moduleContainer').style.display = 'none';
+    document.getElementById('moduleContainer').innerHTML = '';
+}
+
+window.showMenu = showMenu;

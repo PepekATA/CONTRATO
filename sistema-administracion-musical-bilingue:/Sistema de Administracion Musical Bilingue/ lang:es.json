@@ -1,0 +1,35 @@
+{
+  "mainTitle": "🎵 Sistema de Administración Musical",
+  "mainSubtitle": "Generador Profesional de Contratos y Documentos Legales",
+  "menu": {
+    "administration": "📄 Acuerdo de Administración",
+    "publishing": "📋 Acuerdo de Editoría",
+    "songwriter": "✍️ Acuerdo de Compositor",
+    "splitsheet": "💰 Hoja de Porcentajes",
+    "letter": "✉️ Carta de Dirección",
+    "help": "ℹ️ Guía de Uso"
+  },
+  "common": {
+    "back": "← Volver al Menú",
+    "generate": "Generar Vista Previa",
+    "downloadPDF": "💾 Descargar PDF",
+    "downloadJPG": "🖼️ Descargar JPG",
+    "downloadExcel": "📊 Abrir en Excel"
+  },
+  "administration": {
+    "title": "Acuerdo de Administración",
+    "description": "Contrato donde el compositor autoriza a tu empresa a administrar sus derechos de autor musicales.",
+    "publisher": "Editora (Publisher)",
+    "writer": "Nombre del Compositor",
+    "date": "Fecha del Contrato",
+    "commission": "Comisión de Administración (%)",
+    "term": "Duración del Contrato (años)",
+    "territory": "Territorio"
+  },
+  "publishing": {
+    "title": "Acuerdo de Editoría",
+    "description": "Acuerdo donde el compositor cede parte de los derechos de publicación.",
+    "type": "Tipo de Acuerdo",
+    "share": "Publisher Share (%)"
+  }
+}

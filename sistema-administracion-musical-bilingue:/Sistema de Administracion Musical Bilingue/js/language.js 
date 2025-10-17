@@ -1,0 +1,135 @@
+let translations = {};
+let currentLanguage = 'es';
+
+export async function initLanguage() {
+    const savedLang = localStorage.getItem('language') || 'es';
+    await changeLanguage(savedLang);
+}
+
+export async function changeLanguage(lang) {
+    try {
+        const response = await fetch(`lang/${lang}.json`);
+        translations = await response.json();
+        currentLanguage = lang;
+        
+        localStorage.setItem('language', lang);
+        updateUI();
+        
+        // Highlight active language button
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        const activeLangBtn = document.getElementById(`lang-${lang}`);
+        if (activeLangBtn) {
+            activeLangBtn.classList.add('active');
+        }
+        
+    } catch (error) {
+        console.error('Error loading language:', error);
+    }
+}
+
+function updateUI() {
+    // Update main title and subtitle
+    const mainTitle = document.getElementById('main-title');
+    const mainSubtitle = document.getElementById('main-subtitle');
+    
+    if (mainTitle) mainTitle.textContent = translations.mainTitle;
+    if (mainSubtitle) mainSubtitle.textContent = translations.mainSubtitle;
+    
+    // Update menu buttons
+    const menuContainer = document.getElementById('mainMenu');
+    if (menuContainer && menuContainer.children.length > 0) {
+        Array.from(menuContainer.children).forEach(btn => {
+            const moduleKey = btn.dataset.module;
+            if (moduleKey && translations.menu && translations.menu[moduleKey]) {
+                btn.textContent = translations.menu[moduleKey];
+            }
+        });
+    }
+    
+    // Update all elements with data-translate attribute
+    translateElements();
+}
+
+function translateElements() {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const translatedText = translate(key);
+        
+        if (translatedText && translatedText !== key) {
+            element.textContent = translatedText;
+        }
+    });
+}
+
+export function translate(key) {
+    const keys = key.split('.');
+    let value = translations;
+    
+    for (const k of keys) {
+        value = value?.[k];
+    }
+    
+    return value || key;
+}
+
+export function getCurrentLanguage() {
+    return currentLanguage;
+}
+
+// Exponer globalmente
+window.changeLanguage = changeLanguage;
+window.translate = translate;
+```
+
+---
+
+## 📋 Resumen de la Estructura Final
+```
+sistema-administracion-musical-bilingue/
+│
+├── index.html
+│
+├── css/
+│   ├── main.css
+│   └── components.css
+│
+├── js/
+│   ├── app.js
+│   ├── navigation.js
+│   ├── language.js
+│   └── export.js
+│
+├── modules/
+│   ├── administration/
+│   │   ├── administration.html
+│   │   ├── administration.js
+│   │   └── administration-template.js
+│   │
+│   ├── publishing/
+│   │   ├── publishing.html
+│   │   ├── publishing.js
+│   │   └── publishing-template.js
+│   │
+│   ├── songwriter/
+│   │   ├── songwriter.html
+│   │   ├── songwriter.js
+│   │   └── songwriter-template.js
+│   │
+│   ├── splitsheet/
+│   │   ├── splitsheet.html
+│   │   ├── splitsheet.js
+│   │   └── splitsheet-template.js
+│   │
+│   ├── letter/
+│   │   ├── letter.html
+│   │   ├── letter.js
+│   │   └── letter-template.js
+│   │
+│   └── help/
+│       ├── help.html
+│       └── help.js
+│
+└── lang/
+    ├── es.json
+    └── en.json

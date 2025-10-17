@@ -1,0 +1,113 @@
+{
+  "mainTitle": "🎵 Music Administration System",
+  "mainSubtitle": "Professional Contract and Legal Document Generator",
+  "menu": {
+    "administration": "📄 Administration Agreement",
+    "publishing": "📋 Publishing Agreement",
+    "songwriter": "✍️ Songwriter Agreement",
+    "splitsheet": "💰 Split Sheet",
+    "letter": "✉️ Letter of Direction",
+    "help": "ℹ️ User Guide"
+  },
+  "common": {
+    "back": "← Back to Menu",
+    "generate": "Generate Preview",
+    "downloadPDF": "💾 Download PDF",
+    "downloadJPG": "🖼️ Download JPG",
+    "downloadExcel": "📊 Open in Excel",
+    "whatIs": "What is it?"
+  },
+  "administration": {
+    "title": "Administration Agreement",
+    "description": "Contract where the composer authorizes your company to administer their musical copyrights, collect royalties and register works with PROs (ASCAP, BMI, The MLC). Does not transfer ownership, only management rights.",
+    "publisher": "Publisher",
+    "writer": "Composer Name",
+    "date": "Contract Date",
+    "commission": "Administration Commission (%)",
+    "term": "Contract Term (years)",
+    "territory": "Territory"
+  },
+  "publishing": {
+    "title": "Publishing Agreement",
+    "description": "Agreement where the composer assigns part of the publishing rights to your company. Can be co-publishing (50/50) or full publishing. Includes participation in publishing and mechanical income.",
+    "publisher": "Publisher",
+    "writer": "Composer Name",
+    "date": "Contract Date",
+    "type": "Agreement Type",
+    "share": "Publisher Share (%)"
+  },
+  "songwriter": {
+    "title": "Songwriter Agreement",
+    "description": "Contract between composer and publisher establishing terms for future works. Defines how composition royalties will be split, advances, and composer's obligations to deliver works.",
+    "publisher": "Publisher",
+    "writer": "Composer Name",
+    "date": "Contract Date",
+    "minimum": "Minimum Number of Works per Year",
+    "royalty": "Royalty Rate (% of Writer's Share)"
+  },
+  "splitsheet": {
+    "title": "Split Sheet",
+    "description": "Document specifying who wrote what percentage of a song. Essential to avoid disputes and register correctly with PROs. Defines composition and publishing splits.",
+    "songTitle": "Song Title",
+    "isrc": "ISRC",
+    "writer1": "Main Writer",
+    "writerShare": "Writer Share (%)",
+    "publisher": "Publisher",
+    "publisherShare": "Publisher Share (%)",
+    "date": "Date"
+  },
+  "letter": {
+    "title": "Letter of Direction",
+    "description": "Formal letter where the composer instructs PROs (ASCAP, BMI, The MLC) to pay royalties directly to your company as authorized administrator. It is the official payment authorization.",
+    "writer": "Composer Name",
+    "publisher": "Publisher/Administrator",
+    "pro": "Composer's PRO",
+    "date": "Date",
+    "address": "Composer's Address"
+  },
+  "help": {
+    "title": "📚 Complete User Guide",
+    "admin": {
+      "title": "1️⃣ Administration Agreement",
+      "when": "When to use: To manage rights without buying publishing. You collect and distribute royalties.",
+      "commission": "Typical commission: 15-25%",
+      "includes": "What it includes: PRO registration, mechanical/performance royalty collection, payment audits."
+    },
+    "publishing": {
+      "title": "2️⃣ Publishing Agreement",
+      "when": "When to use: When you buy part of the publishing (co-pub) or all of it (full pub).",
+      "key": "Key difference: Here you DO acquire partial/total copyright ownership.",
+      "copub": "Co-Publishing: 50% publisher share (you) / 50% writer share (composer)"
+    },
+    "songwriter": {
+      "title": "3️⃣ Songwriter Agreement",
+      "when": "When to use: For artists who will create future works under your publishing company.",
+      "includes": "Includes: Delivery obligations, advances, exclusivity, rights reversion."
+    },
+    "splitsheet": {
+      "title": "4️⃣ Split Sheet",
+      "when": "When to use: ALWAYS. For each individual song.",
+      "critical": "Critical for: The MLC, ASCAP, BMI require clear splits.",
+      "rule": "Rule: Writer Share + Publisher Share must add up to 100%"
+    },
+    "letter": {
+      "title": "5️⃣ Letter of Direction",
+      "when": "When to use: For PROs to pay directly to your company.",
+      "requires": "Requires: Notarized composer signature (depending on PRO).",
+      "send": "Send to: ASCAP, BMI, The MLC, Harry Fox Agency."
+    },
+    "process": {
+      "title": "📋 Complete Recommended Process:",
+      "step1": "Contact artist and verify they are the legitimate author",
+      "step2": "Sign Administration Agreement (or Publishing if buying rights)",
+      "step3": "Obtain Split Sheets for all songs",
+      "step4": "Signed Letter of Direction",
+      "step5": "Copy of composer's ID",
+      "step6": "Register with The MLC as publisher",
+      "step7": "Register composer with ASCAP/BMI (if not already)",
+      "step8": "Claim ISRCs at The MLC with documentation",
+      "step9": "Wait for approval (15-45 days)",
+      "step10": "Collect historical and future royalties"
+    }
+  }
+}

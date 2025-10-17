@@ -1,0 +1,64 @@
+export function getSplitSheetTemplate(data) {
+    return `
+═══════════════════════════════════════════════════════════════
+                          SPLIT SHEET
+           OFFICIAL SONGWRITER AND PUBLISHER OWNERSHIP
+═══════════════════════════════════════════════════════════════
+
+SONG INFORMATION:
+───────────────────────────────────────────────────────────────
+Title:                ${data.song}
+ISRC:                 ${data.isrc}
+Date Created:         ${data.date}
+
+
+OWNERSHIP BREAKDOWN:
+═══════════════════════════════════════════════════════════════
+
+WRITER'S SHARE (100% Total):
+───────────────────────────────────────────────────────────────
+Writer Name:          ${data.writer1}
+Writer Share:         ${data.writerShare}%
+PRO Affiliation:      [ASCAP / BMI / SESAC]
+IPI/CAE Number:       [Number]
+
+TOTAL WRITER SHARE:   ${data.writerShare}%
+
+
+PUBLISHER'S SHARE (100% Total):
+───────────────────────────────────────────────────────────────
+Publisher Name:       ${data.publisher}
+Publisher Share:      ${data.pubShare}%
+PRO Affiliation:      [ASCAP / BMI / SESAC]
+IPI/CAE Number:       [Number]
+
+TOTAL PUBLISHER SHARE: ${data.pubShare}%
+
+
+VERIFICATION:
+═══════════════════════════════════════════════════════════════
+☑ Writer Share + Publisher Share = 200% (100% + 100%)
+☑ All parties confirm accuracy of above information
+☑ This Split Sheet is binding and shall govern all royalty distributions
+
+
+SIGNATURES:
+═══════════════════════════════════════════════════════════════
+
+Writer:
+_________________________________    Date: ______________
+${data.writer1}
+Signature: _______________________
+
+
+Publisher:
+_________________________________    Date: ______________
+${data.publisher}
+Authorized Signature: _____________
+
+
+═══════════════════════════════════════════════════════════════
+        This document must be kept with all copyright records
+═══════════════════════════════════════════════════════════════
+`;
+}

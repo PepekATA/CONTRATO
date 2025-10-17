@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Administración Musical Bilingüe</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="main-title">🎵 Sistema de Administración Musical</h1>
+            <p id="main-subtitle">Generador Profesional de Contratos y Documentos Legales</p>
+            
+            <!-- Selector de Idioma -->
+            <div class="language-selector">
+                <button onclick="changeLanguage('es')" class="lang-btn" id="lang-es">🇪🇸 Español</button>
+                <button onclick="changeLanguage('en')" class="lang-btn" id="lang-en">🇺🇸 English</button>
+            </div>
+        </div>
+        
+        <!-- Menú Principal -->
+        <div id="mainMenu" class="nav-buttons"></div>
+        
+        <!-- Contenedor Dinámico de Módulos -->
+        <div id="moduleContainer" class="content"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
