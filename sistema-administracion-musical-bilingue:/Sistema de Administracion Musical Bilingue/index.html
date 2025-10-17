@@ -13,24 +13,56 @@
             <h1 id="main-title">🎵 Sistema de Administración Musical</h1>
             <p id="main-subtitle">Generador Profesional de Contratos y Documentos Legales</p>
             
-            <!-- Selector de Idioma -->
             <div class="language-selector">
-                <button onclick="changeLanguage('es')" class="lang-btn" id="lang-es">🇪🇸 Español</button>
-                <button onclick="changeLanguage('en')" class="lang-btn" id="lang-en">🇺🇸 English</button>
+                <button onclick="App.changeLanguage('es')" class="lang-btn active" id="lang-es">🇪🇸 Español</button>
+                <button onclick="App.changeLanguage('en')" class="lang-btn" id="lang-en">🇺🇸 English</button>
             </div>
         </div>
         
-        <!-- Menú Principal -->
         <div id="mainMenu" class="nav-buttons"></div>
-        
-        <!-- Contenedor Dinámico de Módulos -->
         <div id="moduleContainer" class="content"></div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
-    <script type="module" src="js/app.js"></script>
+    <!-- Core App -->
+    <script src="js/core/translations.js"></script>
+    <script src="js/core/language.js"></script>
+    <script src="js/core/navigation.js"></script>
+    <script src="js/core/export.js"></script>
+    
+    <!-- Modules -->
+    <script src="js/modules/administration.js"></script>
+    <script src="js/modules/publishing.js"></script>
+    <script src="js/modules/songwriter.js"></script>
+    <script src="js/modules/splitsheet.js"></script>
+    <script src="js/modules/letter.js"></script>
+    <script src="js/modules/help.js"></script>
+    
+    <script src="js/app.js"></script>
 </body>
 </html>
+```
+
+## Estructura de archivos:
+```
+/
+├── index.html
+├── css/
+│   ├── main.css
+│   └── components.css
+└── js/
+    ├── app.js
+    ├── core/
+    │   ├── translations.js
+    │   ├── language.js
+    │   ├── navigation.js
+    │   └── export.js
+    └── modules/
+        ├── administration.js
+        ├── publishing.js
+        ├── songwriter.js
+        ├── splitsheet.js
+        ├── letter.js
+        └── help.js
